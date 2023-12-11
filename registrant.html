@@ -9,6 +9,85 @@
     <link rel="stylesheet" href="css/import.css">
 </head>
 <body>
-    
+    <div class="adminSubPage">
+        <header>
+            <h1>
+                <img src="images/logo.png" alt="h-well 국민건강 보험 로고 이미지">
+                신원확인시스템
+            </h1>
+            <div>
+                <strong>관리자</strong>
+                <button>로그아웃</button>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li class="active"><a href="registrant.html">등록자 관리</a></li>
+                <li><a href="visitHistory.html">방문이력 조회</a></li>
+                <li><a href="medicalInstitution.html">의료기관 관리</a></li>
+            </ul>
+        </nav>
+        <section class="registrantPage">
+            <h2>등록자 관리</h2>
+            <div class="searchBox">
+                <form>
+                    <fieldset>
+                        <label for="">이름</label>
+                        <input type="text">
+                        <label for="">생년월일</label>
+                        <input type="date">
+                        <span>-</span>
+                        <input type="date">
+                        <input type="submit" value="조회">
+                    </fieldset>
+                </form>
+            </div>
+
+            <strong>의료기관 목록</strong>
+            <div class="boardBox">
+                <div class="board-title">
+                    <b>순번</b>
+                    <b>의료기관</b>
+                    <b>이름</b>
+                    <b>생년월일</b>
+                    <b>전화번호</b>
+                    <b>지문여부</b>
+                    <b>안면여부</b>
+                    <b>등록일자</b>
+                </div>
+                <ol class="board-content">
+                    <li>
+                        <span>1</span>
+                        <p>위지병원</p>
+                        <span>홍*동</span>
+                        <span>1973-02-05</span>
+                        <span>010452561****</span>
+                        <span>등록</span>
+                        <span>등록</span>
+                        <time>2023-09-04</time>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="paginationBox">
+                <a href="">처음 페이지</a>
+                <a href="">이전 페이지</a>
+                <ol>
+                    <li class="active"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">7</a></li>
+                    <li><a href="">8</a></li>
+                    <li><a href="">9</a></li>
+                    <li><a href="">10</a></li>
+                </ol>
+                <a href="">다음 페이지</a>
+                <a href="">마지막 페이지</a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
