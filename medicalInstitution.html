@@ -27,34 +27,240 @@
                 <li class="active"><a href="medicalInstitution.html">의료기관 관리</a></li>
             </ul>
         </nav>
-        <section class="registrantPage">
-            <h2></h2>
-
+        <section class="medicalInstitutionPage">
+            <h2>의료기관 관리</h2>
+            <div class="searchBox">
+                <form>
+                    <fieldset>
+                        <label for="">의료기관 명칭</label>
+                        <input type="search">
+                        <label for="">대표자 이름</label>
+                        <input type="text">
+                        <input type="submit" value="조회">
+                        <button data-popupOpen="medicalInfo">등록</button>
+                    </fieldset>
+                </form>
+            </div>
             
             <strong>의료기관 목록</strong>
             <div class="boardBox">
                 <div class="board-title">
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                    <b></b>
+                    <b>순번</b>
+                    <b>아이디</b>
+                    <b>의료기관 명칭</b>
+                    <b>의료기관 분류</b>
+                    <b>사업자번호</b>
+                    <b>대표자</b>
+                    <b>전화번호</b>
+                    <b>팩스번호</b>
+                    <b>승인구분</b>
                 </div>
                 <ol class="board-content">
                     <li>
-                        <span></span>
-                        <p></p>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <time></time>
+                        <span>1</span>
+                        <span>skho</span>
+                        <span>sk병원</span>
+                        <span>치과의원</span>
+                        <span>110-12-12345</span>
+                        <span>홍*동</span>
+                        <span>02-1234-5678</span>
+                        <span>02-1234-5678</span>
+                        <span>미승인</span>
                     </li>
                 </ol>
             </div>
+
+            <!-- <div class="paginationBox">
+                <a href="">처음 페이지</a>
+                <a href="">이전 페이지</a>
+                <ol>
+                    <li class="active"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">7</a></li>
+                    <li><a href="">8</a></li>
+                    <li><a href="">9</a></li>
+                    <li><a href="">10</a></li>
+                </ol>
+                <a href="">다음 페이지</a>
+                <a href="">마지막 페이지</a>
+            </div> -->
+            
+            <div data-popup="medicalInfo">
+                <form>
+                    <fieldset>
+                        <b>의료기관 정보</b>
+                        <ul>
+                            <li class="full">
+                                <label for="">의료기관 아이디</label>
+                                <div>
+                                    <input type="text">
+                                    <button>ID 입력</button>
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">의료기관 명칭</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">대표자 이름</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">사업자번호</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">의료기관 분류</label>
+                                <div>
+                                    <div class="selectBox">
+                                        <button>선택</button>
+                                        <div>
+                                            <!-- data-value로 데이터 저장 -->
+                                            <button data-value="select1">선택 1</button>
+                                            <button data-value="select2">선택 2</button>
+                                            <button data-value="select3">선택 3</button>
+                                        </div>
+                                        <!-- 셀렉트 박스에서 선택하면 아래 input에 value 값으로 button의 data-value 값이 들어가게 됩니다 -->
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">전화번호</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">팩스번호</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li class="full">
+                                <label for="">주소</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li class="full">
+                                <label for="">사진</label>
+                                <div>
+                                    <input type="file" id="imageFile" accept="image/*">
+                                    <input type="text" readonly>
+                                    <label for="imageFile">파일선택</label>
+                                </div>
+                            </li>
+                            <li class="full">
+                                <label for="">병원 소개</label>
+                                <div>
+                                    <textarea name="" id=""></textarea>
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">비밀번호</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">비밀번호 확인</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li class="full">
+                                <label for="">상태구분</label>
+                                <div>
+                                    <input type="radio" name="" id="" checked>
+                                    <label for="">등록</label>
+                                    <input type="radio" name="" id="">
+                                    <label for="">승인</label>
+                                    <input type="radio" name="" id="">
+                                    <label for="">탈퇴</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <input type="submit">
+                    </fieldset>
+                </form>
+            </div>
         </section>
     </div>
+
+    <script>
+        function popup(){
+            document.querySelector('body').addEventListener('click',()=>{
+                document.querySelectorAll('[data-popup]').forEach((element)=>{
+                    element.classList.remove('active');
+                    document.querySelectorAll('.selectBox').forEach((selectBoxElement)=>{
+                        selectBoxElement.classList.remove('active');
+                    })
+                })
+            })
+            document.querySelectorAll('[data-popupOpen]').forEach((element)=>{
+                element.addEventListener('click',(e)=>{
+                    e.stopPropagation();
+                    e.preventDefault();
+                    document.querySelector(`[data-popup='${e.target.getAttribute('data-popupOpen')}']`).classList.add('active');
+                })
+            })
+            document.querySelectorAll('[data-popup] > *').forEach((element)=>{
+                element.addEventListener('click',(e)=>{
+                    e.stopPropagation();
+                })
+            })
+        }
+
+        function selectBox(){
+            const selectBox = document.querySelectorAll('.selectBox');
+            document.querySelectorAll('.selectBox button').forEach((element)=>{
+                element.addEventListener('click',function(e){
+                    e.preventDefault();
+                })
+            })
+            document.querySelector('.selectBox > button').addEventListener('click',function(e){
+                e.stopPropagation();
+                selectBox.forEach((element)=>{
+                    element.classList.add('active');
+                })
+            })
+            document.querySelectorAll('[data-popup] > *').forEach((element)=>{
+                element.addEventListener('click',(e)=>{
+                    selectBox.forEach((element)=>{
+                        element.classList.remove('active');
+                    })
+                })
+            })
+            document.querySelectorAll('.selectBox div button').forEach((element)=>{
+                element.addEventListener('click',(e)=>{
+                    document.querySelector('.selectBox > button').innerHTML = e.target.innerHTML;
+                    document.querySelector('.selectBox input').value = e.target.getAttribute('data-value');
+                })
+            })
+        }
+
+        function inputFile(){
+            document.querySelectorAll('[type="file"]').forEach((element)=>{
+                element.addEventListener('change',(e)=>{
+                    element.nextSibling.nextSibling.value = e.target.files[0].name;
+                })
+            })
+        }
+
+        popup();
+        selectBox();
+        inputFile();
+    </script>
 </body>
 </html>

@@ -1,11 +1,22 @@
-/* 체크 박스 아이콘 */
-input[type="checkbox"] + label{display: flex; justify-content: center; align-items: center; cursor: pointer;}
-input[type="checkbox"] + label::before{content: ''; --width: 16px; --styleIdx: 0; width: var(--width); aspect-ratio: 1; background: url(../images/icon-check.png) no-repeat center top calc(var(--width) * var(--styleIdx) * -1) / 100%; margin-right: 6px;}
-input[type="checkbox"]:checked + label::before{--styleIdx: 1;}
+/* 스크롤 바 공통 */
+body *::-webkit-scrollbar{width: 6px;}
+body *::-webkit-scrollbar-thumb{background-color: rgba(99, 99, 99, 0.5); border-radius: 6px;}
+
+:is(input, textarea):focus{outline: 1px solid var(--color-point);}
+input:disabled{background-color: #F1F1F1; color: #666;}
+
+/* 체크 박스, 라디오 박스 아이콘 */
+input:is([type="checkbox"], [type="radio"]) + label{display: flex; justify-content: center; align-items: center; cursor: pointer;}
+input:is([type="checkbox"], [type="radio"]) + label::before{content: ''; --width: 16px; --styleIdx: 0; width: var(--width); aspect-ratio: 1; background-repeat: no-repeat; background-position: center top calc(var(--width) * var(--styleIdx) * -1); background-size: 100%; margin-right: 6px;}
+input[type="checkbox"] + label::before{background-image: url(../images/icon-check.png);}
+input[type="radio"] + label::before{background-image: url(../images/icon-radio.png);}
+input[type="radio"] ~ label:not(:first-of-type){margin-left: 20px;}
+input:is([type="checkbox"], [type="radio"]):checked + label::before{--styleIdx: 1;}
+
 
 
 /* 관리자 - 서브 페이지 공통 */
-.adminSubPage{display: flex; flex-wrap: wrap; max-width: 1280px;}
+.adminSubPage{display: flex; flex-wrap: wrap; width: 1280px; min-height: 600px; max-height: 1080px;}
 .adminSubPage header{width: 100%; height: var(--headerHeight); display: flex; justify-content: space-between; align-items: center; padding-inline: 20px; box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.10);}
 .adminSubPage header h1{font-size: 13px; font-weight: 500; display: flex; align-items: flex-end; padding-bottom: 12.27px;}
 .adminSubPage header h1 img{width: 75.5px; margin-right: 4px;}
@@ -22,25 +33,26 @@ input[type="checkbox"]:checked + label::before{--styleIdx: 1;}
 .adminSubPage nav ul li:is(.active, :hover) a{color: var(--color-point);}
 .adminSubPage nav ul li.active a{align-items: center; justify-content: space-between;}
 .adminSubPage nav ul li.active a::after{content: ''; width: 10px; aspect-ratio: 1; background: url(../images/icon-on.png) no-repeat center / cover;}
-.adminSubPage [class$="Page"]{flex: 1; padding: 40px 40px 60px 40px; box-sizing: border-box;}
+.adminSubPage [class$="Page"]{flex: 1; padding: 40px 40px 60px 40px; box-sizing: border-box; display: flex; flex-direction: column;}
 .adminSubPage [class$="Page"] h2{font-size: 22px; line-height: 32px; font-weight: 700; margin-bottom: 20px;}
 .adminSubPage [class$="Page"] .searchBox{padding-block: 12px; background-color: #FFF8F7; border-radius: 8px; margin-bottom: 40px;}
 .adminSubPage [class$="Page"] .searchBox fieldset{display: flex; justify-content: center; align-items: center; font-size: 13px;}
 .adminSubPage [class$="Page"] .searchBox fieldset label{font-weight: 400; margin-right: 12px;}
 .adminSubPage [class$="Page"] .searchBox fieldset label:not(:first-of-type){margin-left: 30px;}
 .adminSubPage [class$="Page"] .searchBox fieldset span{margin-inline: 5px;}
-.adminSubPage [class$="Page"] .searchBox fieldset input{height: 32px; border-radius: 4px;}
+.adminSubPage [class$="Page"] .searchBox fieldset :is(input, button){height: 32px; border-radius: 4px;}
 .adminSubPage [class$="Page"] .searchBox fieldset input:not([type="search"], [type="submit"]){width: 120px;}
 .adminSubPage [class$="Page"] .searchBox fieldset input:not([type="submit"]){padding-inline: 10px; border: 1px solid #DEDEDE; box-sizing: border-box;}
 .adminSubPage [class$="Page"] .searchBox fieldset input[type="search"]{width: 210px;}
-.adminSubPage [class$="Page"] .searchBox fieldset input[type="submit"]{width: 63px; color: white; font-weight: 700; background-color: var(--color-point); border: none; margin-left: 8px;}
+.adminSubPage [class$="Page"] .searchBox fieldset :is(input[type="submit"], button){width: 63px; color: white; font-weight: 700; background-color: var(--color-point); border: none; margin-left: 8px;}
 .adminSubPage [class$="Page"] > strong{display: block; font-size: 17px; line-height: 20px; font-weight: 700; margin-bottom: 20px;}
-.adminSubPage [class$="Page"] .boardBox{font-size: 13px; line-height: 16px; text-align: center;}
+.adminSubPage [class$="Page"] .boardBox{flex: 1; font-size: 13px; line-height: 16px; text-align: center; display: flex; flex-direction: column; overflow: hidden;}
 .adminSubPage [class$="Page"] .boardBox :is(.board-title, .board-content li){display: flex; align-items: center; padding-block: 20px;}
 .adminSubPage [class$="Page"] .boardBox :is(.board-title, .board-content li) > *{box-sizing: border-box;}
 .adminSubPage [class$="Page"] .boardBox .board-title{background-color: #F5F5F5; border-radius: 8px;}
 .adminSubPage [class$="Page"] .boardBox .board-title b{font-weight: 700;}
 .adminSubPage [class$="Page"] .boardBox .board-title b:not(:last-child){border-right: 1px solid #DEDEDE;}
+.adminSubPage [class$="Page"] .boardBox .board-content{flex: 1; overflow: auto;}
 .adminSubPage [class$="Page"] .boardBox .board-content li{border-bottom: 1px solid #F1F1F1;}
 .adminSubPage [class$="Page"] .paginationBox{--height: 32px; display: flex; justify-content: center; align-items: center; margin-top: 30px;}
 .adminSubPage [class$="Page"] .paginationBox > a{width: var(--height); aspect-ratio: 1; background: url(../images/icon-pagination.png) no-repeat center top calc(var(--height) * var(--styleIdx) * -1) / 100%; text-indent: -9999px;}
@@ -53,3 +65,32 @@ input[type="checkbox"]:checked + label::before{--styleIdx: 1;}
 .adminSubPage [class$="Page"] .paginationBox ol li:is(.active, :hover){color: var(--color-point);}
 .adminSubPage [class$="Page"] .paginationBox ol li a{font-size: 13px; font-weight: 700; line-height: var(--height); padding-inline: 10px;}
 .adminSubPage [class$="Page"] .paginationBox ol li.active a{text-decoration: underline; text-underline-offset: 2px;}
+
+/* 팝업 */
+*:has([data-popup]){position: relative;}
+[data-popup]{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.50); display: none; justify-content: center; align-items: center;}
+[data-popup].active{display: flex;}
+[data-popup] form{height: 93%;}
+[data-popup] fieldset{width: 420px; height: 100%; display: flex; flex-direction: column; background-color: white; border-radius: 12px; overflow: hidden;}
+[data-popup] fieldset > b{display: block; font-size: 15px; font-weight: 700; line-height: 18px; text-align: center; padding-block: 20px;}
+[data-popup] fieldset ul{padding: 10px 20px 40px; flex: 1; display: flex; flex-wrap: wrap; gap: 20px; overflow: auto;}
+[data-popup] fieldset ul li{font-size: 13px; line-height: 18px;}
+[data-popup] fieldset ul li.full{width: 100%;}
+[data-popup] fieldset ul li:not(.full){width: calc((100% - 20px) / 2);}
+[data-popup] fieldset ul li > label:first-child{display: block; font-weight: 700; margin-bottom: 10px;}
+[data-popup] fieldset ul li > div{display: flex; gap: 7px;}
+[data-popup] fieldset ul li > div > *:first-child{flex: 1;}
+[data-popup] fieldset ul li > div :is(input, textarea, .selectBox > button){width: 100%; padding-inline: 10px; border: 1px solid #DEDEDE; border-radius: 4px; box-sizing: border-box;}
+[data-popup] fieldset ul li > div :is(input:not([type="radio"]), .selectBox > button){height: 32px;}
+[data-popup] fieldset ul li > div textarea{height: 100px; padding-block: 10px;}
+[data-popup] fieldset ul li > div .selectBox{position: relative;}
+[data-popup] fieldset ul li > div .selectBox button{text-align: left;}
+[data-popup] fieldset ul li > div .selectBox:not(.active) button{background: url(../images/icon-dropDown.png) no-repeat center right 10px / 12px;}
+[data-popup] fieldset ul li > div .selectBox div{display: none;}
+[data-popup] fieldset ul li > div .selectBox.active > button{border: 1px solid var(--color-point);}
+[data-popup] fieldset ul li > div .selectBox.active div{display: block; position: absolute; left: 0; top: calc(100% + 3px); width: 100%; padding: 4px; background-color: white; box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.15); border-radius: 4px; box-sizing: border-box;}
+[data-popup] fieldset ul li > div .selectBox.active div button{width: 100%; height: 32px; padding-inline: 10px;}
+[data-popup] fieldset ul li > div .selectBox.active div button:is(:hover, .active){font-weight: 700; background-color: #FFF8F7; border-radius: 4px;}
+[data-popup] fieldset ul li > div .selectBox input{display: none;}
+[data-popup] fieldset ul li > div > :is(button, input[type="file"] ~ label){flex-shrink: 0; line-height: 32px; font-weight: 400; padding-inline: 20px; background-color: #F5F5F5; border-radius: 4px; cursor: pointer;}
+[data-popup] fieldset input[type="submit"]{font-size: 13px; font-weight: 700; color: white; width: 100%; height: 46px; background-color: var(--color-point); border: none;}

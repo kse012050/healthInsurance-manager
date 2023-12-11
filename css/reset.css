@@ -84,6 +84,7 @@ button{background-color: transparent; border: none; cursor: pointer; padding: 0;
 mark{background-color: transparent; color: inherit;}
 
 input[type="checkbox"],
-input[type="radio"]{display: none;}
+input[type="radio"],
+input[type="file"]{display: none;}
 
 .editor *:not(font){all: revert;}
