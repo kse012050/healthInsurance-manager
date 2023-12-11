@@ -32,11 +32,12 @@ input[type="checkbox"]:checked + label::before{--styleIdx: 1;}
 .adminSubPage [class$="Page"] .searchBox fieldset input{height: 32px; border-radius: 4px;}
 .adminSubPage [class$="Page"] .searchBox fieldset input:not([type="search"], [type="submit"]){width: 120px;}
 .adminSubPage [class$="Page"] .searchBox fieldset input:not([type="submit"]){padding-inline: 10px; border: 1px solid #DEDEDE; box-sizing: border-box;}
+.adminSubPage [class$="Page"] .searchBox fieldset input[type="search"]{width: 210px;}
 .adminSubPage [class$="Page"] .searchBox fieldset input[type="submit"]{width: 63px; color: white; font-weight: 700; background-color: var(--color-point); border: none; margin-left: 8px;}
 .adminSubPage [class$="Page"] > strong{display: block; font-size: 17px; line-height: 20px; font-weight: 700; margin-bottom: 20px;}
 .adminSubPage [class$="Page"] .boardBox{font-size: 13px; line-height: 16px; text-align: center;}
 .adminSubPage [class$="Page"] .boardBox :is(.board-title, .board-content li){display: flex; align-items: center; padding-block: 20px;}
-.adminSubPage [class$="Page"] .boardBox :is(.board-title, .board-content li) > *{padding-inline: 10px; box-sizing: border-box;}
+.adminSubPage [class$="Page"] .boardBox :is(.board-title, .board-content li) > *{box-sizing: border-box;}
 .adminSubPage [class$="Page"] .boardBox .board-title{background-color: #F5F5F5; border-radius: 8px;}
 .adminSubPage [class$="Page"] .boardBox .board-title b{font-weight: 700;}
 .adminSubPage [class$="Page"] .boardBox .board-title b:not(:last-child){border-right: 1px solid #DEDEDE;}

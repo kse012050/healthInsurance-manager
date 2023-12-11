@@ -14,6 +14,7 @@
 .signInPage fieldset div label{font-size: 13px; font-weight: 400;}
 
 
+/* 관리자 - 등록자 관리 - 게시판 */
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *{padding-inline: 20px;}
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(1){width: 70px;}
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(2){flex: 1;}
@@ -24,3 +25,14 @@
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 88px;}
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 88px;}
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(8){width: 120px;}
+
+/* 관리자 - 방문이력조회 - 게시판 */
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *{padding-inline: 20px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(1){width: 70px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(2){flex: 1;}
+.adminSubPage .visitHistoryPage .boardBox .board-content li > *:nth-child(2){text-align: left;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(3){width: 90px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 112px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(5){width: 134px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 164px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 150px;}

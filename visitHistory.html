@@ -27,32 +27,66 @@
                 <li><a href="medicalInstitution.html">의료기관 관리</a></li>
             </ul>
         </nav>
-        <section class="registrantPage">
-            <h2></h2>
+        <section class="visitHistoryPage">
+            <h2>방문이력조회</h2>
 
+            <div class="searchBox">
+                <form>
+                    <fieldset>
+                        <label for="">의료기관</label>
+                        <input type="search">
+                        <label for="">반문일자</label>
+                        <input type="date">
+                        <span>-</span>
+                        <input type="date">
+                        <input type="submit" value="조회">
+                        <label for="">이름</label>
+                        <input type="text">
+                    </fieldset>
+                </form>
+            </div>
             
             <strong>의료기관 목록</strong>
             <div class="boardBox">
                 <div class="board-title">
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                    <b></b>
+                    <b>순번</b>
+                    <b>의료기관</b>
+                    <b>이름</b>
+                    <b>생년월일</b>
+                    <b>전화번호</b>
+                    <b>방문일자</b>
+                    <b>인증방법</b>
                 </div>
                 <ol class="board-content">
                     <li>
-                        <span></span>
-                        <p></p>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <time></time>
+                        <span>1</span>
+                        <p>위지병원</p>
+                        <span>홍*동</span>
+                        <span>1973-02-05</span>
+                        <span>010452561****</span>
+                        <time>2023-11-30 11:15:49</time>
+                        <span>주민(외국인등록증)</span>
                     </li>
                 </ol>
+            </div>
+
+            <div class="paginationBox">
+                <a href="">처음 페이지</a>
+                <a href="">이전 페이지</a>
+                <ol>
+                    <li class="active"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">7</a></li>
+                    <li><a href="">8</a></li>
+                    <li><a href="">9</a></li>
+                    <li><a href="">10</a></li>
+                </ol>
+                <a href="">다음 페이지</a>
+                <a href="">마지막 페이지</a>
             </div>
         </section>
     </div>
