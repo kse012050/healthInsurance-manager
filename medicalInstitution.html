@@ -192,6 +192,7 @@
                             </li>
                         </ul>
                         <input type="submit">
+                        <button data-popupClose="medicalInfo">팝업 닫기</button>
                     </fieldset>
                 </form>
             </div>
@@ -218,6 +219,12 @@
             document.querySelectorAll('[data-popup] > *').forEach((element)=>{
                 element.addEventListener('click',(e)=>{
                     e.stopPropagation();
+                })
+            })
+            document.querySelectorAll('[data-popupClose]').forEach((element)=>{
+                element.addEventListener('click',(e)=>{
+                    e.preventDefault();
+                    document.querySelector(`[data-popup='${e.target.getAttribute('data-popupClose')}']`).classList.remove('active');
                 })
             })
         }
