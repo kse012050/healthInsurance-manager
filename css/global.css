@@ -44,6 +44,7 @@ input:is([type="checkbox"], [type="radio"]):checked + label::before{--styleIdx: 
 .adminSubPage [class$="Page"] .searchBox fieldset input:not([type="search"], [type="submit"]){width: 120px;}
 .adminSubPage [class$="Page"] .searchBox fieldset input:not([type="submit"]){padding-inline: 10px; border: 1px solid #DEDEDE; box-sizing: border-box;}
 .adminSubPage [class$="Page"] .searchBox fieldset input[type="search"]{width: 210px;}
+.adminSubPage [class$="Page"] .searchBox fieldset input[type="date"]::-webkit-calendar-picker-indicator {background: url(../images/icon-date.png) no-repeat center / cover;}
 .adminSubPage [class$="Page"] .searchBox fieldset :is(input[type="submit"], button){width: 63px; color: white; font-weight: 700; background-color: var(--color-point); border: none; margin-left: 8px;}
 .adminSubPage [class$="Page"] > strong{display: block; font-size: 17px; line-height: 20px; font-weight: 700; margin-bottom: 20px;}
 .adminSubPage [class$="Page"] .boardBox{flex: 1; font-size: 13px; line-height: 16px; text-align: center; display: flex; flex-direction: column; overflow: hidden;}
