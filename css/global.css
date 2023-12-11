@@ -1,0 +1,4 @@
+/* 체크 박스 아이콘 */
+input[type="checkbox"] + label{display: flex; justify-content: center; align-items: center; cursor: pointer;}
+input[type="checkbox"] + label::before{content: ''; --width: 16px; --styleIdx: 0; width: var(--width); aspect-ratio: 1; background: url(../images/icon-check.png) no-repeat center top calc(var(--width) * var(--styleIdx) * -1) / 100%; margin-right: 6px;}
+input[type="checkbox"]:checked + label::before{--styleIdx: 1;}

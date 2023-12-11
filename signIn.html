@@ -9,6 +9,37 @@
     <link rel="stylesheet" href="css/import.css">
 </head>
 <body>
+    <section class="signInPage">
+        <h1><img src="images/logo.png" alt="h-well 국민건강 보험 로고 이미지"></h1>
+        <form>
+            <fieldset>
+                <h2>신원확인시스템</h2>
+                <ul>
+                    <li>
+                        <input type="text" placeholder="아이디">
+                    </li>
+                    <li>
+                        <input type="password" placeholder="비밀번호">
+                    </li>
+                </ul>
+                <input type="submit" value="로그인">
+                <div>
+                    <input type="checkbox" id="saveId">
+                    <label for="saveId">아이디 저장</label>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
     
+    <script>
+        function submitClick(){
+            document.querySelector('input[type="submit"]').addEventListener('click',function(e){
+                e.preventDefault();
+                window.location.href = './registrant.html';
+            })
+        }
+        submitClick();
+    </script>
 </body>
 </html>
