@@ -20,10 +20,10 @@
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(2){flex: 1;}
 .adminSubPage .registrantPage .boardBox .board-content li > *:nth-child(2){text-align: left;}
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(3){width: 90px;}
-.adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 112px;}
+.adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 116px;}
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(5){width: 134px;}
-.adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 88px;}
-.adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 88px;}
+.adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 90px;}
+.adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 90px;}
 .adminSubPage .registrantPage .boardBox :is(.board-title, .board-content li) > *:nth-child(8){width: 120px;}
 
 /* 관리자 - 방문이력조회 - 게시판 */
@@ -32,9 +32,9 @@
 .adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(2){flex: 1;}
 .adminSubPage .visitHistoryPage .boardBox .board-content li > *:nth-child(2){text-align: left;}
 .adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(3){width: 90px;}
-.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 112px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 116px;}
 .adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(5){width: 134px;}
-.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 164px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 170px;}
 .adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 150px;}
 
 /* 관리자 - 의료기관 관리- 게시판 */
@@ -42,10 +42,10 @@
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *{padding-inline: 10px;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(1){width: 50px;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(2){width: 110px;}
-.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(3){width: 220px;}
+.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(3){flex: 1;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 120px;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(5){width: 114px;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 70px;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 114px;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(8){width: 114px;}
-.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(9){width: 68px;}
+.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(9){width: 70px;}
