@@ -34,7 +34,7 @@
 .adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(3){width: 90px;}
 .adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 116px;}
 .adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(5){width: 134px;}
-.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 170px;}
+.adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 180px;}
 .adminSubPage .visitHistoryPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 150px;}
 
 /* 관리자 - 의료기관 관리- 게시판 */
@@ -46,6 +46,15 @@
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 120px;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(5){width: 114px;}
 .adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 70px;}
-.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 114px;}
-.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(8){width: 114px;}
-.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(9){width: 70px;}
+.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(7){width: 120px;}
+.adminSubPage .medicalInstitutionPage .boardBox :is(.board-title, .board-content li) > *:nth-child(8){width: 120px;}
+
+/* 관리자 - 관리자 계정 관리 - 게시판 */
+.adminSubPage .accountPage .boardBox :is(.board-title, .board-content li){padding-inline: 10px;}
+.adminSubPage .accountPage .boardBox :is(.board-title, .board-content li) > *{padding-inline: 10px;}
+.adminSubPage .accountPage .boardBox :is(.board-title, .board-content li) > *:nth-child(1){width: 50px;}
+.adminSubPage .accountPage .boardBox :is(.board-title, .board-content li) > *:nth-child(2){width: 120px;}
+.adminSubPage .accountPage .boardBox :is(.board-title, .board-content li) > *:nth-child(3){flex: 1;}
+.adminSubPage .accountPage .boardBox :is(.board-title, .board-content li) > *:nth-child(4){width: 120px;}
+.adminSubPage .accountPage .boardBox :is(.board-title, .board-content li) > *:nth-child(5){width: 120px;}
+.adminSubPage .accountPage .boardBox :is(.board-title, .board-content li) > *:nth-child(6){width: 100px;}

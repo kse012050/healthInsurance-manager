@@ -70,8 +70,8 @@ input:is([type="checkbox"], [type="radio"]):checked + label::before{--styleIdx: 
 *:has([data-popup]){position: relative;}
 [data-popup]{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.50); display: none; justify-content: center; align-items: center;}
 [data-popup].active{display: flex;}
-[data-popup] form{height: 93%;}
-[data-popup] fieldset{width: 420px; height: 100%; display: flex; flex-direction: column; background-color: white; border-radius: 12px; overflow: hidden; position: relative;}
+[data-popup] form{max-height: 93%; display: flex;}
+[data-popup] fieldset{width: 420px; flex: 1; display: flex; flex-direction: column; background-color: white; border-radius: 12px; overflow: hidden; position: relative;}
 [data-popup] fieldset > b{display: block; font-size: 15px; font-weight: 700; line-height: 18px; text-align: center; padding-block: 20px;}
 [data-popup] fieldset ul{padding: 10px 20px 40px; flex: 1; display: flex; flex-wrap: wrap; gap: 20px; overflow: auto;}
 [data-popup] fieldset ul li{font-size: 13px; line-height: 18px;}
